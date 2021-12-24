@@ -20,3 +20,6 @@ def resposta_dado_invalido(client, db):
 
 def test_tarefa_nao_existe_no_bd(resposta_dado_invalido):
     assert not Tarefa.objects.exists()
+
+def test_pagina_com_dados_invalidos(resposta):
+    assert resposta.status_code == 400
