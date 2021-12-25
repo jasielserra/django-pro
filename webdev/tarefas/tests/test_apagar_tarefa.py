@@ -8,6 +8,9 @@ def tarefa_pendente(db):
 
 @pytest.fixture
 def resposta_com_tarefa(client, tarefa):
-    resp = client.post(reverse('tarefas:detalhe', kwargs ={'tarefa_id': tarefa.id}),
+    resp = client.post(reverse('tarefas:apagar', kwargs ={'tarefa_id': tarefa.id}),
                        )
     return resp
+
+def test_apagar_tarefa(resposta):
+    assert not Tarefa.objects.exists()
