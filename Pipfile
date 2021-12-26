@@ -8,6 +8,7 @@ django = "==3.2.10"
 gunicorn = "*"
 python-decouple = "*"
 dj-database-url = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 pytest-django = "*"
