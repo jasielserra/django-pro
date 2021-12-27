@@ -15,9 +15,9 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.7
-    - name: Copiar Varriaveis de Ambiente
+    - name: Copying configurations
       run: |
-        cp contrib/env_sample .env
+          cp contrib/env-sample .env
     - name: Instalar Dependências
       run: |
         pip install pipenv
